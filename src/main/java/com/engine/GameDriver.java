@@ -1,7 +1,9 @@
 package com.engine;
+import com.engine.game.Game;
 
-public class Main {
+public class GameDriver {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Game game = CustomGame.getInstance();
+        game.play();
     }
 }
