@@ -1,4 +1,4 @@
-# Project Title: **Uno Game Engine**
+# **Uno Game Engine**
 
 ## Project Overview:
 This project focuses on developing a customizable Uno game engine using Java and object-oriented programming principles. The game engine will serve as a foundation for building various Uno game variations, making it easy for developers to implement new rules, cards, and gameplay mechanics while retaining the core functionalities of Uno. The project will incorporate an abstract class `Game`, which will provide the base for creating different variations of the game with minimal effort.
