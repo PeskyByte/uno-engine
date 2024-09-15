@@ -1,33 +1,49 @@
-package com.engine.gamemanager;
+package com.engine.game;
+
 import com.engine.card.Card;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+
+import java.util.*;
 
 public class Deck {
-    List<Card> deck;
+    private List<Card> deck;
 
-    public Deck(){
+    public Deck() {
         deck = new ArrayList<Card>();
     }
 
-    public void shuffle(){
+    public void shuffle() {
         Collections.shuffle(deck);
     }
 
-    public Card drawCard(int index){
+    public Card drawCard(int index) {
         return deck.remove(index);
     }
 
-    public Card drawCardFromTop(){
+    public Card drawCardFromTop() {
         return drawCard(0);
     }
 
-    public Card drawCardFromBottom(){
-        return drawCard(deck.size()-1);
+    public void addCard(Card card) {
+        if (card == null) throw new IllegalArgumentException();
+        deck.add(card);
     }
 
-    public Card drawCardFromMiddle(){
-        return drawCard(deck.size()/2);
+    public int getDeckSize() {
+        return deck.size();
+    }
+
+    public List<Card> getDeck() {
+        return deck;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        int index = 1;
+        for(Card card: deck){
+            s.append(index).append("- ").append(card.toString()).append('\n');
+            index++;
+        }
+        return s.toString();
     }
 }

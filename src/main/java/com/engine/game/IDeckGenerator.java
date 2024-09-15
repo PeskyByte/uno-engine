@@ -1,5 +1,5 @@
-package com.engine.gamemanager;
+package com.engine.game;
 
 public interface IDeckGenerator {
-    public Deck Generate();
+    public Deck generate();
 }
